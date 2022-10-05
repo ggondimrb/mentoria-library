@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: flex;  
+  display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-`
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -13,7 +13,7 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  background-color: #7DDE86;
+  background-color: #7dde86;
   padding-inline-start: 5px;
 
   .header-title {
@@ -25,7 +25,7 @@ export const Header = styled.header`
     flex-direction: row;
     background-color: #afa7a7;
     height: 5vh;
-    gap: 5px;
+    gap: 10px;
     padding-inline-start: 5px;
     padding-inline-end: 5px;
   }
@@ -35,6 +35,6 @@ export const Header = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-block-start: 4px;
   }
-
-`
+`;

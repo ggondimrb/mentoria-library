@@ -1,4 +1,6 @@
 import { Container, Header } from "./styles";
+import { FiShoppingCart, FiUser } from "react-icons/fi";
+import { Search } from "../../components/Search";
 
 export function HomePage() {
   return (
@@ -7,15 +9,16 @@ export function HomePage() {
         <span className="header-title">Livraria da Sandrine</span>
         <div className="buttons">
           <div className="header-icon">
-            <strong>C</strong>
+            <FiShoppingCart />
             <span>Carrinho</span>
           </div>
           <div className="header-icon">
-            <strong>M</strong>
+            <FiUser />
             <span>Minha conta</span>
-          </div>          
+          </div>
         </div>
       </Header>
+      <Search />
     </Container>
-  )
+  );
 }
