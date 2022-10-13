@@ -23,21 +23,4 @@ export const Container = styled.div`
     border-radius: 10px;
   }
 
-  input {
-    height: 36px;
-    width: 461px;
-    border-radius: 10px;
-    margin-block-start: 10px;
-    background: #e2e2e2;
-    box-shadow: 0 3px 6px rgba(95, 123, 145, 0.2);
-    border: none;
-
-    &:focus {
-      outline: none;
-    }
-
-    @media only screen and (max-width: 600px) {
-      width: 300px;
-    }
-  }
 `;

@@ -1,6 +1,7 @@
 import { Container, Header } from "./styles";
 import { FiShoppingCart, FiUser } from "react-icons/fi";
 import { Search } from "../../components/Search";
+import { Tab } from "../../components/Tab";
 
 export function HomePage() {
   return (
@@ -19,6 +20,7 @@ export function HomePage() {
         </div>
       </Header>
       <Search />
+      <Tab />
     </Container>
   );
 }
