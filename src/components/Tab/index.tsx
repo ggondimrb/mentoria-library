@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Product } from "../Product";
 import { Container, TabContent } from "./styles";
 
 export function Tab() {
@@ -6,16 +7,24 @@ export function Tab() {
 
   return (
     <Container>
-      <div>
-        <button onClick={() => setIsVisible("MAIS_VENDIDOS")}>
+      <header>
+        <button
+          className={isVisible === "MAIS_VENDIDOS" ? "active" : ""}
+          onClick={() => setIsVisible("MAIS_VENDIDOS")}
+        >
           Mais vendidos
         </button>
-        <button onClick={() => setIsVisible("EM_PROMOCAO")}>Em promoção</button>
-      </div>
+        <button
+          className={isVisible === "EM_PROMOCAO" ? "active" : ""}
+          onClick={() => setIsVisible("EM_PROMOCAO")}
+        >
+          Em promoção
+        </button>
+      </header>
       <div>
         {isVisible === "MAIS_VENDIDOS" && (
           <TabContent>
-            <h1>mais vendidos</h1>
+            <Product />
           </TabContent>
         )}
         {isVisible === "EM_PROMOCAO" && (
