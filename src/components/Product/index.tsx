@@ -1,11 +1,17 @@
+import { ProductType } from "../Tab";
 import { Container } from "./styles";
 
-export function Product() {
+type ProductProps = {
+  product: ProductType;
+};
+
+export function Product(props: ProductProps) {
+  const { product } = props;
   return (
     <Container>
-      <img src="https://m.media-amazon.com/images/I/916Vg5YllaL.jpg" />
-      <strong>Nome do livro</strong>
-      <span>R$ 22,99</span>
+      <img src={product.image} />
+      <strong>{product.title}</strong>
+      <span>{product.formattedPrice}</span>
     </Container>
   );
 }

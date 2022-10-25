@@ -42,4 +42,13 @@ export const Container = styled.div`
   }
 `;
 
-export const TabContent = styled.div``;
+export const TabContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 66px;
+  margin-block-start: 38px;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
