@@ -70,7 +70,8 @@ height: 100vh;
                 .amount{
                     display: flex;
                     flex-direction: row;
-                    height: 43px;
+                    height: 45px;
+
 
                     .left-button{
                         border-top-left-radius: 25px;
@@ -89,7 +90,7 @@ height: 100vh;
 
                         }
 
-                    }
+                    }                   
 
                     .right-button{
                         border-top-right-radius: 25px;
@@ -122,32 +123,41 @@ height: 100vh;
                         font-size: 16px;
                     }
                 }
+                .price{
+                    font-weight: 700;
+                    font-size: 16px;
+                    color: #090a0a;
+                    padding: 12px 20px;
+                    border-radius: 25px;                
+                    border: 1px solid #818080;
+                    
+                }
             }
             
-            /* span{
-                display: flex;
-                flex-direction: row;
-        
-                font-weight: 700;
-                font-size: 16px;
-                color: #090a0a;
-                padding: 5px;
-                border-radius: 25px;
+            
+        }
+        .button-add{
+            display: flex;    
+            align-self: center;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            width: 309px;
+            height: 40px;
 
-                border: 1px solid #818080;
-            } */
+            background: #198155;
+            border-radius: 40px;
+            border: None;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: #125f3f;
+
+            }
 
         }
     }
-    /* button{
-        position: relative;
-        width: 309px;
-        height: 40px;
-
-        background: #198155;
-        border-radius: 40px;
-
-    } */
     
 }
 

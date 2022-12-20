@@ -4,36 +4,50 @@ import { Product } from "../Product";
 import { Container, TabContent } from "./styles";
 
 export type ProductType = {
-  image: string;
+  id: number;
   title: string;
   price: number;
   formattedPrice: string;
+  description: string;
+  images: {src: string; alt: string}[];
+
 };
 
-const list: ProductType[] = [
+export const productList: ProductType[] = [
   {
-    image: "https://m.media-amazon.com/images/I/916Vg5YllaL.jpg",
+    id: 1,
+    images: [{src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho1"}, {src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho1"}, {src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho1"}],
     title: "Nome do livro 1",
     price: 22.92222,
     formattedPrice: "",
+    description: "descrição 1"
   },
   {
-    image: "https://m.media-amazon.com/images/I/916Vg5YllaL.jpg",
+    id: 2,
+    images: [{src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho2"}],
     title: "Nome do livro 2",
     price: 10,
     formattedPrice: "",
+    description: "descrição 2"
+
   },
   {
-    image: "https://m.media-amazon.com/images/I/916Vg5YllaL.jpg",
+    id: 3,
+    images: [{src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho3"}],
     title: "Nome do livro 3",
     price: 50.95,
     formattedPrice: "",
+    description: "descrição 3"
+
   },
   {
-    image: "https://m.media-amazon.com/images/I/916Vg5YllaL.jpg",
+    id: 4,
+    images: [{src:"https://m.media-amazon.com/images/I/916Vg5YllaL.jpg", alt:"livrinho4"}],
     title: "Nome do livro 4",
     price: 1300.9,
     formattedPrice: "",
+    description: "descrição 4"
+
   },
 ];
 
@@ -46,7 +60,7 @@ export function Tab() {
   useEffect(() => {
     function formatProductListToDescription() {
       setProductList(
-        list.map((product) => {
+        productList.map((product) => {
           product.formattedPrice = formatToBrCurrencyString(product.price);
           return product;
         })

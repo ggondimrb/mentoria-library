@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 120px;
   height: 160px;
+  text-decoration: none;
 
   img {
     width: 120px;
